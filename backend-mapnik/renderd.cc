@@ -205,7 +205,7 @@ RenderDaemon::RenderDaemon(int argc, char **argv) :
     else if (strfac == "daemon") fac = LOG_DAEMON;
     else
     {
-        die("Cannot use log facility '%s' - only local0-local7, user, daemon are allowed.", strfac.c_str());
+        die(2, "Cannot use log facility '%s' - only local0-local7, user, daemon are allowed.", strfac.c_str());
     }
     openlog("tirex-backend-mapnik", Debuggable::msDebugLogging ? LOG_PERROR|LOG_PID : LOG_PID, fac);
     info("Renderer started (name=%s)", getenv("TIREX_BACKEND_NAME"));
@@ -227,7 +227,7 @@ RenderDaemon::RenderDaemon(int argc, char **argv) :
 #endif
 
     tmp = getenv("TIREX_BACKEND_CFG_fontdir_recurse");
-    bool fr = tmp ? atoi(tmp) : false;
+    bool fr = tmp ? atoi(tmp) : true;
     tmp = getenv("TIREX_BACKEND_CFG_fontdir");
     if (tmp) loadFonts(tmp, fr);
 
@@ -238,13 +238,15 @@ RenderDaemon::RenderDaemon(int argc, char **argv) :
         char *tkn = strtok(dup, " ");
         while (tkn)
         {
-            loadMapnikWrapper(tkn);
+            if (!loadMapnikWrapper(tkn)) {
+                die(2, "Unable to load map");
+            }
             tkn = strtok(NULL, " ");
         }
     }
 
     if (mHandlerMap.empty())
-        die("Cannot load any Mapnik styles");
+        die(2, "Cannot load any Mapnik styles");
 
 }
 

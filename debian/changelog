@@ -1,3 +1,31 @@
+tirex (0.8.0-1~geofabriknoble1) noble; urgency=medium
+
+  * Rebuild for noble.
+  * Update branch in gbp.conf & Vcs-Git URL.
+
+ -- Amanda McCann <amanda@technomancy.org>  Tue, 17 Jun 2025 17:36:36 +0200
+
+tirex (0.8.0) unstable; urgency=medium
+  
+  * preliminary build for github HEAD
+
+ -- Frederik Ramm <ramm@geofabrik.de>  Thu, 19 May 2022 13:41:14 +0200
+
+tirex (0.7.1-4) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Bump Standards-Version to 4.7.0, no changes.
+
+ -- Bas Couwenberg <sebastic@debian.org>  Sun, 28 Jul 2024 20:05:42 +0200
+
+tirex (0.7.1-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix FTBFS with Mapnik 4.0.
+    (closes: #1069109)
+
+ -- Bas Couwenberg <sebastic@debian.org>  Mon, 17 Jun 2024 08:04:22 +0200
+
 tirex (0.7.1-2~geofabriknoble1) noble; urgency=medium
 
   * Rebuild for noble.
