@@ -92,3 +92,10 @@ Description: Tirex sync daemon
  and then copies the metatile to another server. The sync daemon is intended
  to be used in setups where you have multiple tile servers with their own
  rendering queues.
+
+Package: tirex-backend-tms
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, tirex, libwww-perl
+Description: TMS backend for the Tirex tile rendering system
+ The Tirex suite of programs manages map tile rendering and caching.
+ This is the TMS backend for fetching maps from a TMS server.
