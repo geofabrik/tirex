@@ -1,3 +1,20 @@
+tirex (0.8.0-1~geofabriknoble1) noble; urgency=medium
+  
+  [ Frederik Ramm ]
+  * preliminary build for github HEAD
+
+  [ Amanda McCann ]
+  * If any map style fails to load, tirex-backend-manager server will fail, and
+    will only be restarted a few times
+  * Ensure tirex stats are initialized to 0 not null cf issue #29
+  * Default master timeout raised from 10 to 60 minutes
+  * mapnik fontdir_recurse default changed to true
+  * Correct syntax in example map to match current mapnik API
+  * Cleanups to our debian packaging setup
+
+ -- Frederik Ramm <ramm@geofabrik.de>  Thu, 19 May 2022 13:41:14 +0200
+
+
 tirex (0.7.1-4) UNRELEASED; urgency=medium
 
   * Team upload.
@@ -13,6 +30,13 @@ tirex (0.7.1-3) unstable; urgency=medium
     (closes: #1069109)
 
  -- Bas Couwenberg <sebastic@debian.org>  Mon, 17 Jun 2024 08:04:22 +0200
+
+tirex (0.7.1-2~geofabriknoble1) noble; urgency=medium
+
+  * Rebuild for noble.
+  * Update branch in gbp.conf & Vcs-Git URL.
+
+ -- Amanda McCann <amanda@technomancy.org>  Fri, 26 Jul 2024 12:03:28 +0200
 
 tirex (0.7.1-2) unstable; urgency=medium
 

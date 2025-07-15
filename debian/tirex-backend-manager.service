@@ -8,7 +8,12 @@ PartOf=tirex-master.service
 ExecStart=/usr/bin/tirex-backend-manager -f
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
+
 Restart=on-failure
+RestartSec=10s
+StartLimitIntervalSec=10min
+StartLimitBurst=5
+
 User=_tirex
 Group=_tirex
 

@@ -1,0 +1,3 @@
+usr/libexec/tirex-backend-tms
+etc/tirex/renderer/tms.conf
+etc/tirex/renderer/tms/demotms.conf

@@ -44,6 +44,7 @@ our $MAX_PACKET_SIZE = 512;
 # max zoom level we will ever allow
 our $MAX_ZOOM = 30;
 
+our $EXIT_CODE_INVALIDARGUMENT = 2;
 our $EXIT_CODE_RESTART = 9;
 our $EXIT_CODE_DISABLE = 10;
 
@@ -65,11 +66,11 @@ our $SOCKET_DIR                      = '/run/tirex';
 our $MASTER_SYSLOG_FACILITY          = 'daemon';
 our $MASTER_PIDFILE                  = '/run/tirex/tirex-master.pid';
 our $MASTER_LOGFILE                  = '/var/log/tirex/jobs.log';
-our $MASTER_RENDERING_TIMEOUT        = 10; # minutes
+our $MASTER_RENDERING_TIMEOUT        = 60; # minutes
 
 our $BACKEND_MANAGER_SYSLOG_FACILITY = 'daemon';
 our $BACKEND_MANAGER_PIDFILE         = '/run/tirex/tirex-backend-manager.pid';
-our $BACKEND_MANAGER_ALIVE_TIMEOUT   = 8; # minutes - make this a tad smaller than the above
+our $BACKEND_MANAGER_ALIVE_TIMEOUT   = 59; # minutes - make this a tad smaller than the above
 
 our $SYNCD_PIDFILE                   = '/run/tirex/tirex-syncd.pid';
 our $SYNCD_UDP_PORT                  = 9323;

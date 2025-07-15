@@ -1,0 +1,3 @@
+usr/libexec/tirex-backend-wms
+etc/tirex/renderer/wms.conf
+etc/tirex/renderer/wms/demowms.conf
