@@ -47,21 +47,6 @@ Description: Tirex example map data and configuration
  After installation the map can be visisted in a web
  browser by going to http://localhost/tirex-example-map.
 
-Package: tirex-munin-plugin
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tirex, munin-node
-Description: Munin plugin for the Tirex tile rendering system
- The Tirex suite of programs manages map tile rendering and caching.
- This package contains plugins that help to graph Tirex activity with Munin.
-
-Package: tirex-nagios-plugin
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, tirex
-Suggests: nagios3 | nagios-nrpe-server
-Description: Nagios plugins for the Tirex tile rendering system
- The Tirex suite of programs manages map tile rendering and caching.
- This package contains plugins that help to monitor Tirex activity with Nagios.
-
 Package: tirex-backend-wms
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, tirex, libwww-perl
