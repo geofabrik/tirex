@@ -1,4 +1,4 @@
-tirex (0.8.0-1) unstable; urgency=medium
+tirex (0.8.0-1~geofabrikjammy1) jammy; urgency=medium
   
   [ Frederik Ramm ]
   * preliminary build for github HEAD
@@ -18,7 +18,8 @@ tirex (0.8.0-1) unstable; urgency=medium
 tirex (0.7.1-4) UNRELEASED; urgency=medium
 
   * Team upload.
-  * Bump Standards-Version to 4.7.0, no changes.
+  * Bump Standards-Version to 4.7.2, no changes.
+  * Fix old FSF address in copyright file.
 
  -- Bas Couwenberg <sebastic@debian.org>  Sun, 28 Jul 2024 20:05:42 +0200
 
